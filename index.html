@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onshape 3D Viewer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="button-group">
+            <button id="open-3d-model">Ouvrir le modèle 3D</button>
+            <!-- L'iframe avec un lien vers le fichier PDF -->
+            <iframe id="open-pdf" src="./plan.pdf" width="600" height="400">Ouvrir le plan PDF</iframe>
+        </div>
+    </div>
+
+    <script>
+        // Ouvrir le modèle 3D
+        document.getElementById('open-3d-model').addEventListener('click', function() {
+            window.open('https://cad.onshape.com/documents/3e70c43eb6b03b13923bb560/w/7fc5dcff02d938a76ad0d305/e/f2bd18645e758a2e32bdab33', '_blank');
+        });
+
+        // Vérifier si le PDF est chargé correctement
+        document.getElementById('open-pdf').addEventListener('load', function() {
+            console.log('Le PDF a été chargé avec succès dans l\'iframe.');
+        });
+
+        // Gestion des erreurs de chargement
+        document.getElementById('open-pdf').addEventListener('error', function() {
+            alert('Erreur lors du chargement du PDF. Vérifiez que le fichier existe et que le chemin est correct.');
+        });
+    </script>
+
+</body>
+</html>

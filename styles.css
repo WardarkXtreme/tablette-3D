@@ -1,0 +1,62 @@
+/* Styles généraux */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1e1e2f;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+#open-pdf{
+    min-height: 55vh;
+    height: 90%;
+    width: 100%;
+}
+/* Conteneur principal */
+.container {
+    background: #29293d;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+/* Titre */
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Groupe de boutons */
+.button-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 65vh;
+}
+
+/* Style des boutons */
+button {
+    background: linear-gradient(135deg, #ff7b00, #ff4500);
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 5px 15px rgba(255, 69, 0, 0.5);
+}
+
+button:active {
+    transform: scale(0.95);
+}
